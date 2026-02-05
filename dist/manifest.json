@@ -1,0 +1,8 @@
+{
+  "name": "Multi Server Leaver",
+  "description": "Selecteer en verlaat meerdere Discord servers tegelijk",
+  "version": "1.0.0",
+  "authors": ["Plugin Developer"],
+  "source": "https://github.com/twisterboi123/simple-server-leave",
+  "updateUrl": "https://raw.githubusercontent.com/twisterboi123/simple-server-leave/main/dist/index.js"
+}

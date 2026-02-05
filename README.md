@@ -21,17 +21,59 @@ Een geavanceerde Vencord-plugin voor het selecteren en verlaten van meerdere Dis
 - **Counter** - Toont aantal geselecteerde servers
 - **Animaties** - Smooth transitions en pulse-effects
 
-## Installatie
+## How to Setup
+
+### Stap 1: Clone de Repository
+```bash
+git clone https://github.com/twisterboi123/simple-server-leave.git
+cd simple-server-leave
+```
+
+### Stap 2: Installeer Dependencies
+```bash
+npm install
+```
+
+### Stap 3: Build de Plugin
+```bash
+npm run build
+```
+
+Dit genereert de `dist/index.js` file die nodig is voor Vencord.
+
+### Stap 4: Plaats in Vencord Plugins Folder
+Kopieer de `dist` folder inhoud naar je Vencord plugins directory:
+
+**Op Windows:**
+```
+C:\Users\[USERNAME]\AppData\Roaming\Vencord\plugins\simple-server-leave\
+├── index.js
+└── manifest.json
+```
+
+**Op Linux/Mac:**
+```
+~/.config/Vencord/plugins/simple-server-leave/
+├── index.js
+└── manifest.json
+```
+
+### Stap 5: Herstart Discord
+- Sluit Discord volledig af
+- Open Discord opnieuw
+- Ga naar Settings → Plugins
+- Zoek naar "Multi Server Leaver" en zet deze aan
+
+## Installatie (Kort)
 
 1. Zet de plugin-bestanden in je Vencord plugins-directory:
    ```
-   Vencord/plugins/multi-server-leaver/
-   ├── index.ts
-   ├── styles.css
-   └── package.json
+   Vencord/plugins/simple-server-leave/
+   ├── index.js
+   ├── manifest.json
    ```
 
-2. Herstart Vencord of reload de plugins
+2. Herstart Discord
 
 3. Zet de plugin aan in Vencord Settings → Plugins
 
