@@ -2,22 +2,28 @@
 
 ## Installation
 
-1. Copy both files to your Vencord plugins folder:
-   ```
-   ~/.config/Vencord/plugins/simple-server-leave/
-   ```
-   Or on Windows:
-   ```
-   C:\Users\[USERNAME]\AppData\Roaming\Vencord\plugins\simple-server-leave\
-   ```
+### Easiest Method:
+1. Copy the entire `simple-server-leave` folder (or `plugin-release` folder)
+2. Paste it into your Vencord plugins directory
+3. Rename it to `simple-server-leave` if needed
 
-2. Files needed:
-   - `index.js` - The compiled plugin
-   - `manifest.json` - Plugin metadata
+### Vencord Plugins Directory Location:
+- **Windows:** `C:\Users\[USERNAME]\AppData\Roaming\Vencord\plugins\`
+- **Linux:** `~/.config/Vencord/plugins/`
+- **Mac:** `~/Library/Application Support/Vencord/plugins/`
 
-3. Restart Discord
+### Folder Structure:
+```
+Vencord/plugins/simple-server-leave/
+├── index.js
+├── manifest.json
+└── INSTALL.md
+```
 
-4. Go to Settings → Plugins → Multi Server Leaver and enable it
+### Final Steps:
+1. Restart Discord completely
+2. Go to Settings → Vencord → Plugins
+3. Find "Multi Server Leaver" and enable it
 
 ## Usage
 
