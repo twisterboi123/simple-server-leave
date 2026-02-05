@@ -1,0 +1,31 @@
+import "./styles.css";
+import { ChatBarButtonFactory } from "../../api/ChatButtons";
+import { IconComponent, OptionType } from "../../utils/types";
+declare const _default: {
+    name: string;
+    description: string;
+    authors: {
+        name: string;
+        id: bigint;
+    }[];
+    settings: import("../../utils/types").DefinedSettings<{
+        replaceMessageContents: {
+            description: string;
+            type: OptionType.BOOLEAN;
+            default: true;
+        };
+    }, import("../../utils/types").SettingsChecks<{
+        replaceMessageContents: {
+            description: string;
+            type: OptionType.BOOLEAN;
+            default: true;
+        };
+    }>, {}>;
+    chatBarButton: {
+        icon: IconComponent;
+        render: ChatBarButtonFactory;
+    };
+    onBeforeMessageSend(_: string, msg: import("../../api/MessageEvents").MessageObject): void;
+    settingsAboutComponent(): import("react").JSX.Element;
+} & Record<PropertyKey, any> & import("../../utils/types").Plugin;
+export default _default;

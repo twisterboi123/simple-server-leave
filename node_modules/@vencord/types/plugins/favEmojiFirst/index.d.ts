@@ -1,0 +1,31 @@
+import { Emoji } from "@vencord/discord-types";
+interface EmojiAutocompleteState {
+    query?: {
+        type: string;
+        typeInfo: {
+            sentinel: string;
+        };
+        results: {
+            emojis: Emoji[] & {
+                sliceTo?: number;
+            };
+        };
+    };
+}
+declare const _default: {
+    name: string;
+    authors: {
+        name: string;
+        id: bigint;
+    }[];
+    description: string;
+    patches: {
+        find: string;
+        replacement: {
+            match: RegExp;
+            replace: string;
+        }[];
+    }[];
+    sortEmojis({ query }: EmojiAutocompleteState): void;
+} & Record<PropertyKey, any> & import("../../utils/types").Plugin;
+export default _default;

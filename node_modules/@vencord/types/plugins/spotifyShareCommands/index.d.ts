@@ -1,0 +1,11 @@
+import { Command } from "@vencord/discord-types";
+declare const _default: {
+    name: string;
+    description: string;
+    authors: {
+        name: string;
+        id: bigint;
+    }[];
+    commands: Command[];
+} & Record<PropertyKey, any> & import("../../utils/types").Plugin;
+export default _default;

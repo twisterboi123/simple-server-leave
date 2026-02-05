@@ -1,0 +1,35 @@
+{
+  "name": "multi-server-leaver",
+  "version": "1.0.0",
+  "description": "Selecteer en verlaat meeldere Discord servers tegelijk",
+  "author": "Plugin Developer",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "discord",
+    "plugin",
+    "vencord",
+    "guild",
+    "server"
+  ],
+  "vencord": {
+    "authors": [
+      {
+        "name": "Plugin Developer",
+        "id": "0n"
+      }
+    ],
+    "description": "Een Vencord plugin voor het selecteren en verlaten van meerdere Discord servers tegelijk met bevestigingsdialoog en eigenaar-bescherming.",
+    "settings": {}
+  },
+  "dependencies": {
+    "@vencord/types": "^1.14.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

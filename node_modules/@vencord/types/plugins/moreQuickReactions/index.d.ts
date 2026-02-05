@@ -1,0 +1,31 @@
+import { OptionType } from "../../utils/types";
+declare const _default: {
+    name: string;
+    description: string;
+    authors: {
+        name: string;
+        id: bigint;
+    }[];
+    settings: import("../../utils/types").DefinedSettings<{
+        reactionCount: {
+            description: string;
+            type: OptionType.NUMBER;
+            default: number;
+        };
+    }, import("../../utils/types").SettingsChecks<{
+        reactionCount: {
+            description: string;
+            type: OptionType.NUMBER;
+            default: number;
+        };
+    }>, {}>;
+    readonly reactionCount: number;
+    patches: {
+        find: string;
+        replacement: {
+            match: RegExp;
+            replace: string;
+        };
+    }[];
+} & Record<PropertyKey, any> & import("../../utils/types").Plugin;
+export default _default;

@@ -1,0 +1,260 @@
+/* Multi Server Leaver Plugin Styles */
+
+/* Control Panel Container */
+#multi-server-leaver-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 8px;
+    background: var(--background-secondary);
+    border-radius: 8px;
+    margin: 8px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle Button */
+.msl-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--background-tertiary);
+    border: 2px solid var(--brand-500);
+    border-radius: 6px;
+    color: var(--interactive-normal);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.msl-toggle-btn:hover {
+    background: var(--brand-500);
+    color: white;
+    transform: scale(1.05);
+}
+
+.msl-toggle-btn.msl-active {
+    background: var(--brand-500);
+    color: white;
+    box-shadow: 0 0 12px rgba(88, 101, 242, 0.5);
+}
+
+.msl-toggle-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Leave Button */
+.msl-leave-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    background: #f04747;
+    border: 2px solid #f04747;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.msl-leave-btn:hover {
+    background: #d63d3d;
+    border-color: #d63d3d;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(240, 71, 71, 0.5);
+}
+
+.msl-leave-btn:active {
+    transform: scale(0.98);
+}
+
+/* Counter Display */
+.msl-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: var(--background-tertiary);
+    border-radius: 6px;
+    color: var(--interactive-normal);
+    font-size: 12px;
+    font-weight: 600;
+    min-height: 24px;
+    transition: all 0.2s ease;
+}
+
+.msl-counter:not(:empty) {
+    background: var(--brand-500);
+    color: white;
+    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
+}
+
+/* Selected Guild Highlight */
+.multi-server-leaver-selected {
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 0 0 3px var(--brand-500), 0 0 12px rgba(88, 101, 242, 0.6) !important;
+    transform: scale(1.08);
+    transition: all 0.15s ease;
+    animation: pulse-ring 2s infinite;
+}
+
+.multi-server-leaver-selected::after {
+    content: "✓";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: var(--brand-500);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Pulse animation for selected servers */
+@keyframes pulse-ring {
+    0% {
+        box-shadow: 0 0 0 3px var(--brand-500), 0 0 12px rgba(88, 101, 242, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 0 5px var(--brand-500), 0 0 20px rgba(88, 101, 242, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 0 3px var(--brand-500), 0 0 12px rgba(88, 101, 242, 0.6);
+    }
+}
+
+/* Modal Styles */
+.msl-modal {
+    background: var(--background-primary);
+    border-radius: 12px;
+    padding: 24px;
+    color: var(--text-normal);
+}
+
+.msl-modal h2 {
+    margin: 0 0 12px 0;
+    color: var(--text-normal);
+    font-size: 20px;
+}
+
+.msl-modal p {
+    margin: 8px 0;
+    color: var(--text-normal);
+}
+
+.msl-modal-guild-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 12px 0;
+    padding: 12px;
+    background: var(--background-secondary);
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.msl-modal-guild-item {
+    padding: 8px;
+    background: var(--background-tertiary);
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* Guild list scroll styling */
+.msl-modal-guild-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.msl-modal-guild-list::-webkit-scrollbar-track {
+    background: var(--background-secondary);
+    border-radius: 4px;
+}
+
+.msl-modal-guild-list::-webkit-scrollbar-thumb {
+    background: var(--brand-500);
+    border-radius: 4px;
+}
+
+.msl-modal-guild-list::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-600);
+}
+
+/* Disabled guild styling (for owned servers) */
+.msl-guild-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.msl-guild-disabled::before {
+    content: "Je bent eigenaar";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background: #f04747;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #multi-server-leaver-panel {
+        padding: 8px 6px;
+        gap: 8px;
+    }
+
+    .msl-toggle-btn,
+    .msl-leave-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .multi-server-leaver-selected::after {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    #multi-server-leaver-panel {
+        background: rgba(47, 49, 54, 0.8);
+    }
+
+    .msl-toggle-btn,
+    .msl-counter {
+        background: rgba(79, 84, 92, 0.6);
+    }
+}
+
+/* Light mode support */
+@media (prefers-color-scheme: light) {
+    #multi-server-leaver-panel {
+        background: rgba(235, 237, 239, 0.8);
+    }
+
+    .msl-toggle-btn,
+    .msl-counter {
+        background: rgba(220, 222, 224, 0.6);
+    }
+}

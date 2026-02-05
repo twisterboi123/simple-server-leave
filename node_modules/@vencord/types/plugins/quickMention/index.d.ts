@@ -1,0 +1,24 @@
+declare function Icon({ height, width, className }: {
+    height?: number | string;
+    width?: number | string;
+    className?: string;
+}): import("react").JSX.Element;
+declare const _default: {
+    name: string;
+    authors: {
+        name: string;
+        id: bigint;
+    }[];
+    description: string;
+    messagePopoverButton: {
+        icon: typeof Icon;
+        render(msg: import("@vencord/discord-types").Message): {
+            label: string;
+            icon: typeof Icon;
+            message: import("@vencord/discord-types").Message;
+            channel: import("@vencord/discord-types").Channel;
+            onClick: () => void;
+        } | null;
+    };
+} & Record<PropertyKey, any> & import("../../utils/types").Plugin;
+export default _default;
